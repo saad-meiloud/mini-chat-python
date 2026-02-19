@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+pymysql
+python-multipart
+nltk
+Pillow
+python-dotenv
+pytesseract
+pydantic>=2.0.0
+google-generativeai

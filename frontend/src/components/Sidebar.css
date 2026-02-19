@@ -1,0 +1,296 @@
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid;
+  overflow: hidden;
+}
+
+.sidebar.dark {
+  background-color: #202123;
+  border-color: #565869;
+}
+
+.sidebar.light {
+  background-color: #f7f7f8;
+  border-color: #e5e5e6;
+}
+
+.sidebar-header {
+  padding: 12px;
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid;
+}
+
+.sidebar.dark .sidebar-header {
+  border-color: #565869;
+}
+
+.sidebar.light .sidebar-header {
+  border-color: #e5e5e6;
+}
+
+.new-chat-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.sidebar.dark .new-chat-btn {
+  background-color: transparent;
+  color: #ececf1;
+  border-color: #565869;
+}
+
+.sidebar.dark .new-chat-btn:hover {
+  background-color: #343541;
+}
+
+.sidebar.light .new-chat-btn {
+  background-color: #ffffff;
+  color: #353740;
+  border-color: #e5e5e6;
+}
+
+.sidebar.light .new-chat-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.theme-toggle {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.sidebar.dark .theme-toggle {
+  color: #ececf1;
+  border-color: #565869;
+}
+
+.sidebar.dark .theme-toggle:hover {
+  background-color: #343541;
+}
+
+.sidebar.light .theme-toggle {
+  color: #353740;
+  border-color: #e5e5e6;
+}
+
+.sidebar.light .theme-toggle:hover {
+  background-color: #f0f0f0;
+}
+
+.conversations-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #8e8ea0;
+}
+
+.empty-state p {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.empty-state .hint {
+  font-size: 12px;
+  color: #6e6f80;
+  margin-top: 4px;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sidebar.dark .conversation-item {
+  color: #ececf1;
+}
+
+.sidebar.dark .conversation-item:hover {
+  background-color: #343541;
+}
+
+.sidebar.dark .conversation-item.active {
+  background-color: #343541;
+}
+
+.sidebar.light .conversation-item {
+  color: #353740;
+}
+
+.sidebar.light .conversation-item:hover {
+  background-color: #f0f0f0;
+}
+
+.sidebar.light .conversation-item.active {
+  background-color: #e5e5e6;
+}
+
+.conversation-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.conversation-title span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.conversation-item:hover .conversation-actions {
+  opacity: 1;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.sidebar.dark .edit-btn,
+.sidebar.dark .delete-btn {
+  color: #8e8ea0;
+}
+
+.sidebar.dark .edit-btn:hover,
+.sidebar.dark .delete-btn:hover {
+  background-color: #565869;
+  color: #ececf1;
+}
+
+.sidebar.light .edit-btn,
+.sidebar.light .delete-btn {
+  color: #6e6f80;
+}
+
+.sidebar.light .edit-btn:hover,
+.sidebar.light .delete-btn:hover {
+  background-color: #d1d1d6;
+  color: #353740;
+}
+
+.edit-conversation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+.sidebar.dark .edit-input {
+  color: #ececf1;
+  border-color: #565869;
+}
+
+.sidebar.light .edit-input {
+  color: #353740;
+  border-color: #d1d1d6;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.sidebar.dark .save-btn {
+  background-color: #10a37f;
+  color: #ececf1;
+}
+
+.sidebar.dark .save-btn:hover {
+  background-color: #0d8c6f;
+}
+
+.sidebar.dark .cancel-btn {
+  background-color: #565869;
+  color: #ececf1;
+}
+
+.sidebar.dark .cancel-btn:hover {
+  background-color: #6e6f80;
+}
+
+.sidebar.light .save-btn {
+  background-color: #10a37f;
+  color: #ffffff;
+}
+
+.sidebar.light .save-btn:hover {
+  background-color: #0d8c6f;
+}
+
+.sidebar.light .cancel-btn {
+  background-color: #d1d1d6;
+  color: #353740;
+}
+
+.sidebar.light .cancel-btn:hover {
+  background-color: #b5b5ba;
+}

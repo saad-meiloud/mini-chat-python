@@ -1,0 +1,13 @@
+@echo off
+echo Starting Mini Chatbot Backend...
+cd backend
+if not exist venv (
+    echo Creating virtual environment...
+    python -m venv venv
+)
+call venv\Scripts\activate
+echo Installing dependencies...
+pip install -r requirements.txt
+echo Starting server...
+python main.py
+pause
